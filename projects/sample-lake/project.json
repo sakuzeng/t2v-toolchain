@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "slug": "sample-lake",
+  "title": "Sample Lake",
+  "engine": {
+    "name": "h3",
+    "mode": "r2v",
+    "workflow": "workflows/h3/r2v.api.json"
+  },
+  "defaults": {
+    "aspect": "16:9 (Widescreen)",
+    "megapixels": 0.4,
+    "steps": 20,
+    "turbo": false,
+    "strip_audio": false,
+    "ref_image_size": "max"
+  },
+  "cost": {
+    "currency": "CNY",
+    "gpu_hourly": 0.0,
+    "startup_minutes": 2,
+    "estimated_render_minutes_per_second": {
+      "0.4": 1.5,
+      "0.98": 4.0
+    }
+  },
+  "assets": {},
+  "paths": {
+    "prompts": "prompts/shots",
+    "runs": "runs",
+    "deliverables": "deliverables",
+    "references": "references"
+  }
+}

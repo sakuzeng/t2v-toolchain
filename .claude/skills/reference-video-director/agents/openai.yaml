@@ -1,0 +1,4 @@
+interface:
+  display_name: "参考视频导演分析"
+  short_description: "逐镜拆解参考视频、匹配时间码对比并生成导演分析报告"
+  default_prompt: "Use $reference-video-director to analyze this reference video shot by shot before rewriting the generation prompt."

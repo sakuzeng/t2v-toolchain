@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "t2v"
+version = "2.0.0"
+description = "MiniMax H3 / SCAIL-2 本地推理工作台：项目配置、prompt、建图、提交与运行记录"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+# 参考片运镜量化与并排接触表才需要；日常的 validate / plan / run 只用标准库。
+analysis = ["opencv-python", "numpy"]
+
+[project.scripts]
+t2v = "t2v.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["t2v*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

@@ -1,0 +1,32 @@
+.DS_Store
+.comfy_client_id
+projects/*/ref/
+
+# v2：参考/运行/交付媒体不进 Git，只保留目录骨架和运行索引。
+projects/*/references/**
+!projects/*/references/**/
+!projects/*/references/**/.gitkeep
+!projects/*/references/**/README.md
+!projects/*/references/analysis/**/*.md
+!projects/*/references/analysis/**/*.json
+!projects/*/references/analysis/**/*.csv
+!projects/*/references/keyframes/**
+# plan/run 每次自动导出的镜头画布：派生物，不是源。
+# 真值在 run capsule 的 workflow.ui.json（不可覆盖）；要看当前版跑一次免费的 plan 即可。
+projects/*/workflows/*.ui.json
+
+projects/*/runs/**
+!projects/*/runs/.gitkeep
+!projects/*/runs/index.jsonl
+projects/*/deliverables/**
+!projects/*/deliverables/**/
+!projects/*/deliverables/**/.gitkeep
+projects/*/archive/layout-v1/
+projects/*/experiments/legacy-import/artifacts/
+
+# 拆分独立仓（2026-09-18）时从父仓库 .gitignore 迁入，保持忽略口径一致
+*.mp4
+*.mov
+.vscode/sftp.json
+.pytest_cache/
+projects/*/outputs/

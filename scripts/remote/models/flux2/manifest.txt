@@ -1,0 +1,17 @@
+# FLUX.2 [klein] 9B（4 步蒸馏版）—— 出首帧图用的生图权重（2026-09-18 抓取）
+#
+# 格式：sha256  字节数  落盘路径（相对 ComfyUI/models）  [仓库内路径]  [仓库]
+#   - 后两列可省；仓库内路径与落盘路径不同时才要写（Comfy-Org 那类仓库把权重放在 split_files/ 下）
+#   - 仓库列可省，省了就用 --repo / REPO 环境变量的值；因此一份清单可以跨多个仓库
+#
+# 主干在 HF 上是 **gated**（要在网页上接受许可才能下），但 ModelScope 有公开镜像 —— 所以 SRC=modelscope 直接可取。
+# 文本编码器与 VAE 走 Comfy-Org 的公共仓库。
+#
+# 备选（要省下载量时替换第一行，体积减半；A6000 是 Ampere，没有 fp8 张量核，量化只省显存不提速）：
+#   865ba09f5b4c3cbd3468a4bd3acb9fcb2f8740c54317482f0bcd4ed1d3655cee   9433061528  diffusion_models/flux-2-klein-9b-fp8.safetensors  flux-2-klein-9b-fp8.safetensors  black-forest-labs/FLUX.2-klein-9b-fp8
+# 备选文本编码器（bf16，16.38 GB；fp8mixed 是默认，8.66 GB）：
+#   f0ff9239d56269ca1d05e5f86da6a79fac111af464955681f11c7ab0ec5ef6c1  16381517176  text_encoders/qwen_3_8b.safetensors  split_files/text_encoders/qwen_3_8b.safetensors  Comfy-Org/vae-text-encorder-for-flux-klein-9b
+#
+0975d6b77b5f510b99547d6724a208e36527df654e8f6134f59ece3f9f30da58  18157185168  diffusion_models/flux-2-klein-9b.safetensors  flux-2-klein-9b.safetensors  black-forest-labs/FLUX.2-klein-9B
+abad16806e0cbabc54e0325d6565847443fe396d5f0be38bb3cd3fe75a1201d6   8664848742  text_encoders/qwen_3_8b_fp8mixed.safetensors  split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors  Comfy-Org/vae-text-encorder-for-flux-klein-9b
+868fe7b343cc8f3a19dbcfcafbc3d5f888802be3f89bd81b65b3621a066ce8f3    336211292  vae/flux2-vae.safetensors  split_files/vae/flux2-vae.safetensors  Comfy-Org/vae-text-encorder-for-flux-klein-9b

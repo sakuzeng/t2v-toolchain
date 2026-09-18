@@ -1,0 +1,4 @@
+interface:
+  display_name: "Character Design Director"
+  short_description: "从参考图或文字构建专业角色规格、标准正视图与一致性参考板"
+  default_prompt: "Use $character-design-director to turn my reference image or text brief into a production-ready character design and consistency assets."
